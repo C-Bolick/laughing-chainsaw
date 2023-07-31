@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type = 'text/css' href = './style.css'>
+    <title>Weather Forecast</title>
+</head>
+
+
+<header>
+  <h1 class="opening-text"> Weather Dashboard</h1>
+</header>
+
+
+<body>
+  <div class="citySearch"><p>
+    Search by City:
+  </p>
+
+  <div id="history"></div>
+
+
+    <input type='text'/>
+    <button id="searchBtn">Search</button>
+    
+
+    <div id="current_weather">
+        <h2 id="city"></h2>
+        <h3 id="date"></h3>
+        <img id="icon">
+        <p id="temp"></p>
+        <p id="hum"></p>
+        <p id="ws"></p>
+    </div>
+
+    <div id="'forecast_weather"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+</body>
+</html>

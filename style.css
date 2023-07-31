@@ -1,0 +1,42 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.opening-text {
+    text-align: center;
+    background-color: rgb(52, 52, 168);
+    color: white;
+}
+
+.citySearch {
+    text-align: center;
+    background-color: rgb(52, 52, 168);
+    color: white;
+}
+
+#current_weather {
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.forecast_container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.forecast_card {
+    flex: 0 0 20%;
+    margin: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+@media (max-width: 600px) {
+    .forecast_container {
+        flex-wrap: wrap;
+    }
+}
