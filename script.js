@@ -29,6 +29,8 @@ function fetchWeather (city) {
     })
 }
 
+fetchForecast(data)
+
 function fetchForecast (data) {
     var apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&units=imperial&appid=${apiKey}`
     fetch(apiUrlForecast).then(response => response.json( )).then(data => {
@@ -75,7 +77,7 @@ function displayForecast (data) {
         card.append(date,icon,temp,hum,ws);
         card.classList.add("forecast_card");
         card.classList.add("day-" + i);
-        document.getElementById('forecast_weather').append
+        document.getElementById('forecast_weather').append(card);
     }
 }
 
