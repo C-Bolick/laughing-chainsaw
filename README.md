@@ -33,6 +33,4 @@ N/A
 
 ![Alt text](<Screenshot 2023-08-05 155522.png>)
 
-https://github.com/C-Bolick/laughing-chainsaw
-
 https://c-bolick.github.io/laughing-chainsaw/
