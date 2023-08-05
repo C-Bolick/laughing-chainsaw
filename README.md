@@ -19,7 +19,6 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
-
 ## Installation
 
 N/A
@@ -33,3 +32,7 @@ This is a weekly forecast that will show the up coming weather in the city you s
 N/A
 
 ![Alt text](<Screenshot 2023-08-05 155522.png>)
+
+https://github.com/C-Bolick/laughing-chainsaw
+
+https://c-bolick.github.io/laughing-chainsaw/
