@@ -24,21 +24,18 @@ function fetchWeather (city) {
     var apiUrlWeather = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&q=${city}&units=imperial`
     fetch(apiUrlWeather).then(response => response.json( )).then(data => {
         console.log(data);
-        displayWeather(data)
-        fetchForecast(data)
+        displayWeather(data);
+        fetchForecast(data);
+        
     })
 }
-
-fetchForecast(data)
 
 function fetchForecast (data) {
     var apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&units=imperial&appid=${apiKey}`
     fetch(apiUrlForecast).then(response => response.json( )).then(data => {
-        console.log(data)
+        displayForecast(data);
     })
 }
-
-
 
 function displayWeather (data) {
 
@@ -53,12 +50,13 @@ document.getElementById('ws').textContent = data.wind.speed + ' mph'
 }
 
 function displayForecast (data) {
+    data = data.list;
     document.getElementById("forecast_weather").innerHTML = '';
     for (let i = 3; i < data.length; i+=8) {
 
         let card = document.createElement("div");
 
-        var changeDate = days.js.unix(data[i].dt).format('MM D, YYYY');
+        var changeDate = dayjs.unix(data[i].dt).format('MMM D, YYYY');
 
         let date = document.createDocumentFragment("h3");
         date.textContent = changeDate;
@@ -67,7 +65,7 @@ function displayForecast (data) {
         temp.textContent = data[i].main.temp;
 
         let hum = document.createElement('p');
-        hum.textContent = data[i].main.temp;
+        hum.textContent = data[i].main.humidity + ' %'
 
         let ws = document.createElement('p');
         ws.textContent = data[i].wind.speed;
